@@ -1,33 +1,19 @@
 import NavBar from "../../components/NavBar";
 import Cards from "../../components/Cards";
 import styled from "styled-components";
-
-const dataOfCard = [
-    {
-        title: 'A propos de moi',
-        content: 'Développeur de passion, Thionville',
-        color: false
-    },
-    {
-        title: 'Je code avec',
-        content: 'React, Php, JS, MySql',
-        color: true
-    },
-    {
-        title: 'Mes hobbies',
-        content: 'code, jeux-vidéo, guitare, sciences',
-        color: false
-    }
-]
-
+import dataOfCard from "../../utils/data/dataOfCard";
 
 const CardsWrapper = styled.div`
-        display: grid;
-        justify-content: space-evenly;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 100px;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 100px;
+        gap: 80px;
+        max-width: -webkit-fill-available;
+        flex-flow: wrap;
+        flex-wrap: wrap;
+        padding: 10px 5%;
+        margin-top: 50px;
+        
 `
 
 function Home() {
@@ -36,8 +22,8 @@ function Home() {
         <>
             <NavBar />
             <CardsWrapper>
-                {dataOfCard.map(({title, content, color}) => (
-                    <Cards title={title} content={content} color={color} />
+                {dataOfCard.map(({title, content, color, index}) => (
+                    <Cards title={title} content={content} color={color} index={index} />
                 ))}
             </CardsWrapper>
         </>

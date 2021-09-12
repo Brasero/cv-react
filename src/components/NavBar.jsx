@@ -8,14 +8,15 @@ const NavbarWrapper = styled.div`
         border-bottom: 2px solid ${colors.backgroundLight};
         background: ${colors.primary};
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
 `
 
 const ProfilImg = styled.img`
-        height: 200px;
-        width: 200px;
-        border-radius: 250px;
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 100%;
         box-shadow: 1px 1px 10px 1px;
 `
 
@@ -44,7 +45,7 @@ const ContactWrapper = styled.div`
 `
 
 const ContactButton = styled.button`
-            height: 50px;
+            min-height: 50px;
             display: flex;
             margin: 10px;
             width: fit-content;
@@ -79,7 +80,7 @@ function NavBar () {
             </InfoWrapper>
             <ContactWrapper>
                 <ContactButton>
-                    PDF
+                    TELECHRAGER LE PDF
                 </ContactButton>
                 <ContactButton $isSecond>
                     Me Contacter
